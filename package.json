@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Landing page",
   "homepage": "layout_landing-page",
+  "source": "index.html",
   "scripts": {
     "init": "mate-scripts init",
     "start": "parcel",
@@ -17,7 +18,7 @@
     "test": "npm run lint && npm run test:only"
   },
   "keywords": [],
-  "author": "Mate Academy",
+  "author": "Rostyslav",
   "license": "GPL-3.0",
   "devDependencies": {
     "@linthtml/linthtml": "^0.9.6",
@@ -56,5 +57,8 @@
       "backstop": false,
       "cypress": true
     }
+  },
+  "dependencies": {
+    "parcel": "^2.16.4"
   }
 }
