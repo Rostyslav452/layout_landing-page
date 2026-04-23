@@ -1,0 +1,42 @@
+@use './mixins' as *;
+
+/* #region contact-form */
+.contact-form {
+  @include flex-stack(stretch, 32px);
+
+  width: 100%;
+
+  &__inputs-group {
+    @include flex-stack(stretch, 16px);
+
+    width: 100%;
+  }
+
+  &__input {
+    box-sizing: border-box;
+    height: 48px;
+    padding: 14px 16px;
+
+    border: none;
+    border-radius: 40px;
+
+    @include input-text;
+  }
+
+  &__textarea {
+    box-sizing: border-box;
+    min-height: 148px;
+    padding: 14px 16px;
+
+    border: none;
+    border-radius: 16px;
+
+    @include input-text;
+  }
+
+  &__button {
+    @include section-button;
+  }
+}
+
+/* #endregion */

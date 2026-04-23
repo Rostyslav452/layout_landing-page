@@ -1,0 +1,16 @@
+@use './mixins' as *;
+
+/* #region features */
+.features {
+  @include flex-stack;
+
+  &__title {
+    @include section-title;
+  }
+
+  &__link {
+    @include section-button;
+  }
+}
+
+/* #endregion */

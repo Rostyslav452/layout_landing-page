@@ -1,0 +1,22 @@
+/* #region icon */
+.icon {
+  width: 24px;
+  height: 24px;
+
+  background-repeat: no-repeat;
+  background-position: center;
+
+  &--call {
+    background-image: url(../images/icon-call.svg);
+  }
+
+  &--menu {
+    background-image: url(../images/icon-menu.svg);
+  }
+
+  &--close {
+    background-image: url(../images/icon-close.svg);
+  }
+}
+
+/* #endregion */

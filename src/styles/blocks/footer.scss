@@ -1,0 +1,12 @@
+/* #region footer */
+.footer {
+  position: sticky;
+  bottom: 0;
+  z-index: -1;
+  height: 200px;
+  background-image: url(../images/footer-background.png);
+  background-size:cover;
+  background-repeat: no-repeat;
+}
+
+/* #endregion */

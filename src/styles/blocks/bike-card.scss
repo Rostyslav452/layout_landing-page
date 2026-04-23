@@ -1,0 +1,30 @@
+@use './mixins' as *;
+
+/* #region bike-card */
+.bike-card {
+  &__image {
+    display: block;
+    margin-inline: auto;
+    margin-bottom: 32px;
+
+    width: 280px;
+    height: 228px;
+  }
+
+  &__title,
+  &__price {
+    @include article-title;
+  }
+
+  &__title {
+    margin-bottom: 8px;
+  }
+
+  &__description {
+    margin-bottom: 16px;
+
+    @include article-description;
+  }
+}
+
+/* #endregion */

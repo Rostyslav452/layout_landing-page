@@ -1,0 +1,18 @@
+@use './mixins' as *;
+
+/* #region intro */
+.intro {
+  @include flex-stack(flex-start, 32px);
+
+  &__title {
+    @include section-title;
+  }
+
+  &__description {
+    font-weight: 500;
+    font-size: 23px;
+    line-height: 140%;
+  }
+}
+
+/* #endregion */

@@ -1,0 +1,23 @@
+/* #region main */
+.main {
+  color: #fff;
+  background-color: #1d1d1d;
+  font-family: Poppins, sans-serif;
+
+  display: flex;
+  flex-direction: column;
+  gap: 92px;
+
+  padding: 0 20px;
+
+  &__intro {
+    margin-top: 60px;
+  }
+
+  &__contacts {
+    margin-top: -12px;
+    margin-bottom: 120px;
+  }
+}
+
+/* #endregion */
