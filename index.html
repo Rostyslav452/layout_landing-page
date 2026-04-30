@@ -7,7 +7,7 @@
       content="width=device-width, initial-scale=1.0, viewport-fit=cover"
     />
     <title>Landing Page</title>
-    <link rel="icon" href="./src/images/favicon.png">
+    <link rel="icon" href="./src/images/favicon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link
       rel="preconnect"
@@ -277,18 +277,24 @@
               type="text"
               class="contact-form__input"
               placeholder="Name"
+              required
+              autocomplete="off"
             />
             <input
               name="email"
               type="email"
               class="contact-form__input"
               placeholder="Email"
+              required
+              autocomplete="off"
             />
             <textarea
               name="message"
               id="message"
               class="contact-form__textarea"
               placeholder="Message"
+              required
+              autocomplete="off"
             ></textarea>
           </div>
 
@@ -315,6 +321,7 @@
             <a
               href="https://maps.google.com/?q=400+N+1st+Ave,+Minneapolis,+MN+55401"
               class="contact-details__link"
+              target="_blank"
             >
               <p class="contact-details__value">
                 400 first ave.
