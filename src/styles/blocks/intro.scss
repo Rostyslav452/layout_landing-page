@@ -1,11 +1,20 @@
-@use './mixins' as *;
+@use '../utils/variables.scss' as *;
+@use '../utils/mixins' as *;
 
 /* #region intro */
 .intro {
-  @include flex-stack(flex-start, 32px);
+  @include flex-vstack(flex-start, 32px);
+
+  @include on-tablet {
+    @include flex-hstack(flex-start, 10vw);
+  }
 
   &__title {
     @include section-title;
+
+    @include on-tablet {
+      white-space: nowrap;
+    }
   }
 
   &__description {

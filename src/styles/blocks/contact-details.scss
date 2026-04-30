@@ -1,13 +1,14 @@
-@use './mixins' as *;
+@use '../utils/variables.scss' as *;
+@use '../utils/mixins' as *;
 
 /* #region contact-details */
 .contact-details {
-  @include flex-stack(flex-start, 24px);
+  @include flex-vstack(flex-start, 24px);
 
   width: 100%;
 
   &__item {
-    @include flex-stack(flex-start, 8px);
+    @include flex-vstack(flex-start, 8px);
   }
 
   &__label {
@@ -16,7 +17,7 @@
     line-height: 20px;
     font-weight: 400;
     font-size: 14px;
-    color: #fff;
+    color: $color-white;
     font-style: normal;
   }
 
@@ -28,8 +29,12 @@
     font-size: 16px;
 
     text-decoration: none;
-    color: #fff;
+    color: $color-white;
     font-style: normal;
+
+    &:hover {
+      text-shadow: 1px 1px 4px $color-gray;
+    }
   }
 }
 

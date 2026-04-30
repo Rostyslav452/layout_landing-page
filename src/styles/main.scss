@@ -1,3 +1,4 @@
+@use './utils/container.scss';
 @use './blocks/page';
 @use './blocks/top-bar';
 @use './blocks/icon';
@@ -24,7 +25,14 @@ h6,
 p,
 ul,
 ol,
-figure {
+figure,
+picture {
   margin: 0;
   padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }

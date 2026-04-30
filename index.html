@@ -2,8 +2,12 @@
 <html class="page" lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
     <title>Landing Page</title>
+    <link rel="icon" href="./src/images/favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link
       rel="preconnect"
@@ -14,13 +18,17 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:wght@100..900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href=".src/styles/main.css" />
+    <link rel="stylesheet" href="./src/styles/main.scss" />
   </head>
   <body class="page__body">
     <header class="header page__header">
       <div class="top-bar">
-        <a class="top-bar__logo" href="#">
-          <img src="./images/logo-white.svg" alt="MyBike logo" />
+        <a class="top-bar__logo-link" href="#">
+          <img
+            class="top-bar__logo"
+            src="./src/images/logo-white.svg"
+            alt="MyBike logo"
+          />
         </a>
 
         <div class="top-bar__icons">
@@ -34,9 +42,13 @@
     </header>
 
     <aside class="menu page__menu" id="menu">
-      <div class="top-bar">
-        <a class="top__logo" href="#">
-          <img src="./images/logo-black.svg" alt="MyBike logo" />
+      <div class="top-bar menu__top-bar">
+        <a class="top-bar__logo-link" href="#">
+          <img
+            class="top-bar__logo"
+            src="./src/images/logo-black.svg"
+            alt="MyBike logo"
+          />
         </a>
 
         <div class="top-bar__icons">
@@ -44,7 +56,7 @@
         </div>
       </div>
 
-      <nav class="nav menu__nav menu__content">
+      <nav class="nav menu__nav">
         <ul class="nav__list">
           <li class="nav__item">
             <a href="#" class="nav__link">Home</a>
@@ -76,7 +88,7 @@
       </a>
     </aside>
     <main class="main">
-      <section class="intro main__intro" id="intro">
+      <section class="intro main__intro container" id="intro">
         <h2 class="intro__title">Move Free</h2>
         <p class="intro__description">
           Shift your ride, not gears. Find the fastest way to move in the city
@@ -84,12 +96,17 @@
         </p>
       </section>
 
-      <section class="catalogue main__catalogue" id="catalogue">
+      <section class="catalogue main__catalogue container" id="catalogue">
         <h2 class="catalogue__title">Compare Bikes</h2>
         <article class="bike-card catalogue__item">
           <img
             class="bike-card__image"
-            src="images/bike-sporty4.png"
+            src="./src/images/bike-sporty4.png"
+            srcset="
+              ./src/images/bike-sporty4.png        320w,
+              ./src/images/bike-sporty4-tablet.png 744w
+            "
+            sizes="(max-width: 743px) 87.5vw, 52.7vw"
             alt="Bike Sporty 4"
           />
           <h3 class="bike-card__title">Sporty 4</h3>
@@ -103,7 +120,12 @@
         <article class="bike-card catalogue__item">
           <img
             class="bike-card__image"
-            src="images/bike-ride-in-town-ST.png"
+            src="./src/images/bike-ride-in-town-ST.png"
+            srcset="
+              ./src/images/bike-ride-in-town-ST.png        320w,
+              ./src/images/bike-ride-in-town-ST-tablet.png 744w
+            "
+            sizes="(max-width: 743px) 87.5vw, 52.7vw"
             alt="Bike Ride in town ST"
           />
           <h3 class="bike-card__title">Ride in town ST</h3>
@@ -117,7 +139,12 @@
         <article class="bike-card catalogue__item">
           <img
             class="bike-card__image"
-            src="images/bike-agile-ride3.png"
+            src="./src/images/bike-agile-ride3.png"
+            srcset="
+              ./src/images/bike-agile-ride3.png        320w,
+              ./src/images/bike-agile-ride3-tablet.png 744w
+            "
+            sizes="(max-width: 743px) 87.5vw, 52.7vw"
             alt="Bike Agile ride 3"
           />
           <h3 class="bike-card__title">Agile ride 3</h3>
@@ -129,20 +156,32 @@
         </article>
       </section>
 
-      <section class="features main__features" id="features">
+      <section class="features main__features container" id="features">
         <h2 class="features__title">The details</h2>
         <article class="feature-card features__item">
           <div class="feature-card__images">
-            <img
-              src="images/feature1.1.png"
-              alt="Smartphone mounted on handlebars displaying bike app interface"
-              class="feature-card__image"
-            />
-            <img
-              src="images/feature1.2.png"
-              alt="Close-up of the brake lever mounting mechanism on the handlebar"
-              class="feature-card__image"
-            />
+            <picture class="feature-card__image feature-card__image--large">
+              <source
+                media="(min-width: 744px)"
+                srcset="./src/images/feature1.1-tablet.png"
+              />
+
+              <img
+                src="./src/images/feature1.1.png"
+                alt="Smartphone mounted on handlebars displaying bike app interface"
+              />
+            </picture>
+
+            <picture class="feature-card__image">
+              <source
+                media="(min-width: 744px)"
+                srcset="./src/images/feature1.2-tablet.png"
+              />
+              <img
+                src="./src/images/feature1.2.png"
+                alt="Close-up of the brake lever mounting mechanism on the handlebar"
+              />
+            </picture>
           </div>
 
           <h3 class="feature-card__title">Auto Unlock</h3>
@@ -154,16 +193,28 @@
 
         <article class="feature-card features__item">
           <div class="feature-card__images">
-            <img
-              src="images/feature2.1.png"
-              alt="Red taillight integrated directly into the bike's seat tube"
-              class="feature-card__image"
-            />
-            <img
-              src="images/feature2.2.png"
-              alt="White headlight seamlessly built into the front of the frame"
-              class="feature-card__image"
-            />
+            <picture class="feature-card__image feature-card__image--large">
+              <source
+                media="(min-width: 744px)"
+                srcset="./src/images/feature2.1-tablet.png"
+              />
+
+              <img
+                src="./src/images/feature2.1.png"
+                alt="Red taillight integrated directly into the bike's seat tube"
+              />
+            </picture>
+
+            <picture class="feature-card__image">
+              <source
+                media="(min-width: 744px)"
+                srcset="./src/images/feature2.2-tablet.png"
+              />
+              <img
+                src="./src/images/feature2.2.png"
+                alt="White headlight seamlessly built into the front of the frame"
+              />
+            </picture>
           </div>
           <h3 class="feature-card__title">Range & Integrated lights</h3>
           <p class="feature-card__description">
@@ -175,16 +226,28 @@
 
         <article class="feature-card features__item">
           <div class="feature-card__images">
-            <img
-              src="images/feature3.1.png"
-              alt="Matte black hydraulic brake lever"
-              class="feature-card__image"
-            />
-            <img
-              src="images/feature3.2.png"
-              alt="Bicycle kickstand deployed on the ground"
-              class="feature-card__image"
-            />
+            <picture class="feature-card__image">
+              <source
+                media="(min-width: 744px)"
+                srcset="./src/images/feature3.1-tablet.png"
+              />
+
+              <img
+                src="./src/images/feature3.1.png"
+                alt="Matte black hydraulic brake lever"
+              />
+            </picture>
+
+            <picture class="feature-card__image feature-card__image--large">
+              <source
+                media="(min-width: 744px)"
+                srcset="./src/images/feature3.2-tablet.png"
+              />
+              <img
+                src="./src/images/feature3.2.png"
+                alt="Bicycle kickstand deployed on the ground"
+              />
+            </picture>
           </div>
           <h3 class="feature-card__title">
             Hydraulic disc brakes & Lightweight
@@ -202,7 +265,12 @@
 
       <section class="contacts main__contacts" id="contacts">
         <h2 class="contacts__title">Contact us</h2>
-        <form action="#" class="contact-form contacts__form">
+
+        <form
+          onsubmit="this.reset(); return false;"
+          action="#"
+          class="contact-form contacts__form"
+        >
           <div class="contact-form__inputs-group">
             <input
               name="name"

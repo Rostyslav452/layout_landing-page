@@ -1,14 +1,25 @@
-@use './mixins' as *;
+@use '../utils/variables.scss' as *;
+@use '../utils/mixins' as *;
 
 /* #region bike-card */
 .bike-card {
+  grid-column: 1/-1;
+
+  @include on-tablet {
+    grid-column: 2/-2;
+  }
+
+  @include on-desktop {
+    grid-column: span 4;
+  }
+
   &__image {
     display: block;
+    width: 100%;
     margin-inline: auto;
     margin-bottom: 32px;
 
-    width: 280px;
-    height: 228px;
+    @include scale-image;
   }
 
   &__title,

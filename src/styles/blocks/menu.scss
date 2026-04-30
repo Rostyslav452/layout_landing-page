@@ -1,19 +1,31 @@
+@use '../utils/variables.scss' as *;
+@use '../utils/mixins' as *;
+
 /* #region menu */
 .menu {
-  height: 100vh;
-  box-sizing: border-box;
   background-color: #c2c2c2;
 
-  &__top {
+  padding-inline: $mobile-in-padding;
+
+  @include on-tablet {
+    padding-inline: $tablet-in-padding;
+  }
+
+  @include on-desktop {
+    padding-inline: $desktop-in-padding;
+  }
+
+  &__top-bar {
+    padding-inline: 0;
     margin-bottom: 24px;
+
+    @include on-tablet {
+      margin-bottom: 8px;
+    }
   }
 
   &__nav {
     margin-bottom: 40px;
-  }
-
-  &__content {
-    margin-inline: 20px;
   }
 
   &__phone-number {
@@ -43,6 +55,7 @@
     font-size: 12px;
     text-transform: uppercase;
     letter-spacing: 2px;
+    margin-bottom: env(safe-area-inset-bottom);
     text-decoration: none;
   }
 }

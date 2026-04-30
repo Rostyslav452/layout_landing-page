@@ -1,17 +1,24 @@
+@use '../utils/variables.scss' as *;
+@use '../utils/mixins' as *;
+
 /* #region main */
 .main {
-  color: #fff;
+  color: $color-white;
   background-color: #1d1d1d;
-  font-family: Poppins, sans-serif;
+  font-family: $font-primary;
 
-  display: flex;
-  flex-direction: column;
-  gap: 92px;
+  @include flex-vstack(center, 92px);
 
-  padding: 0 20px;
+  @include on-tablet {
+    @include flex-vstack(center, 120px);
+  }
 
   &__intro {
     margin-top: 60px;
+
+    @include on-tablet {
+      margin-block: 120px 12px;
+    }
   }
 
   &__contacts {
